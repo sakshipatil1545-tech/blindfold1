@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blindfold Rebirth | India's First One-Day Inner Transformation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --deep-space: #0a0e17;
+            --cosmic-blue: #1a1f3d;
+            --starlight: #f5f5f7;
+            --nebula-purple: #8b5cf6;
+            --sun-gold: #fbbf24;
+            --supernova: #f59e0b;
+            --galaxy-edge: #1e293b;
+            --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            --float: 0 25px 50px rgba(0, 0, 0, 0.15);
+            --glow: 0 0 30px rgba(245, 158, 11, 0.3);
+            --radius-3d: 20px;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            color: var(--starlight);
+            background: linear-gradient(135deg, var(--deep-space) 0%, var(--cosmic-blue) 100%);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Cosmic Background */
+        .cosmic-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -10;
+            overflow: hidden;
+        }
+
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 5s infinite;
+        }
+
+        .star:nth-child(odd) {
+            animation-delay: 1s;
+        }
+
+        .star:nth-child(even) {
+            animation-delay: 2.5s;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        .nebula {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.1;
+        }
+
+        .nebula-1 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--nebula-purple) 0%, transparent 70%);
+            top: 10%;
+            left: 10%;
+            animation: float 25s infinite ease-in-out;
+        }
+
+        .nebula-2 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--sun-gold) 0%, transparent 70%);
+            bottom: 15%;
+            right: 10%;
+            animation: float 30s infinite ease-in-out reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(120deg); }
+            66% { transform: translate(-20px, 20px) rotate(240deg); }
+        }
+
+        /* 3D Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 25px 0;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+            background: rgba(10, 14, 23, 0.7);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        header.scrolled {
+            padding: 15px 0;
+            background: rgba(10, 14, 23, 0.95);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            perspective: 1000px;
+        }
+
+        .logo-3d {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(145deg, var(--sun-gold), var(--supernova));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--deep-space);
+            font-size: 1.8rem;
+            font-weight: 900;
+            transform-style: preserve-3d;
+            transform: rotateY(15deg);
+            transition: var(--transition);
+            box-shadow: var(--glow);
+            animation: logoGlow 3s infinite alternate;
+        }
+
+        @keyframes logoGlow {
+            0% { box-shadow: 0 0 20px rgba(245, 158, 11, 0.3); }
+            100% { box-shadow: 0 0 40px rgba(245, 158, 11, 0.6); }
+        }
+
+        .logo:hover .logo-3d {
+            transform: rotateY(0deg) scale(1.1);
+        }
+
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.8rem;
+            color: var(--starlight);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo-text span {
+            background: linear-gradient(to right, var(--sun-gold), var(--supernova));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--starlight);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            position: relative;
+            padding: 8px 0;
+            transition: var(--transition);
+            opacity: 0.8;
+        }
+
+        .nav-links a:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--sun-gold), var(--supernova));
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            opacity: 1;
+        }
+
+        .nav-links a:hover:before {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: linear-gradient(145deg, var(--sun-gold), var(--supernova));
+            color: var(--deep-space);
+            padding: 16px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+            transform: translateZ(0);
+            box-shadow: var(--glow);
+        }
+
+        .cta-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.7s ease;
+        }
+
+        .cta-button:hover:before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.4);
+        }
+
+        /* Hero Section - 3D Effect */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 150px 0 100px;
+            overflow: hidden;
+        }
+
+        .hero-orb {
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            top: 50%;
+            right: -200px;
+            transform: translateY(-50%);
+            animation: pulseOrb 8s infinite ease-in-out;
+            filter: blur(40px);
+        }
+
+        @keyframes pulseOrb {
+            0%, 100% { transform: translateY(-50%) scale(1); opacity: 0.5; }
+            50% { transform: translateY(-50%) scale(1.2); opacity: 0.8; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+        }
+
+        .badge-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: badgeFloat 6s infinite ease-in-out;
+        }
+
+        .badge:nth-child(2) {
+            animation-delay: 2s;
+        }
+
+        .badge:nth-child(3) {
+            animation-delay: 4s;
+        }
+
+        @keyframes badgeFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            margin-bottom: 30px;
+            line-height: 1;
+            background: linear-gradient(to right, var(--starlight), var(--sun-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transform: translateY(50px) rotateX(90deg);
+            animation: titleReveal 1.5s 0.5s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes titleReveal {
+            to { opacity: 1; transform: translateY(0) rotateX(0); }
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 1s 1s forwards;
+        }
+
+        .hero-text {
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+            opacity: 0.8;
+            max-width: 600px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 1s 1.2s forwards;
+        }
+
+        @keyframes fadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 1s 1.4s forwards;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 150px 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 100px;
+            position: relative;
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--sun-gold);
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 1s 0.5s forwards;
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 1s 0.7s forwards;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 1s 0.9s forwards;
+        }
+
+        /* Problems Section - 3D Cards */
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            perspective: 1500px;
+        }
+
+        .problem-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius-3d);
+            padding: 50px 40px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transform-style: preserve-3d;
+            transform: rotateY(0deg);
+            opacity: 0;
+            animation: cardFloat 20s infinite ease-in-out;
+        }
+
+        .problem-card:nth-child(even) {
+            animation-delay: 10s;
+        }
+
+        @keyframes cardFloat {
+            0%, 100% { transform: translateY(0) rotateY(0deg); }
+            25% { transform: translateY(-15px) rotateY(5deg); }
+            75% { transform: translateY(10px) rotateY(-5deg); }
+        }
+
+        .problem-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(145deg, rgba(245, 158, 11, 0.1), transparent);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .problem-card:hover:before {
+            opacity: 1;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-20px) rotateY(10deg) scale(1.05);
+            border-color: rgba(245, 158, 11, 0.3);
+            box-shadow: var(--float), var(--glow);
+        }
+
+        .problem-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(145deg, var(--sun-gold), var(--supernova));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--deep-space);
+            margin-bottom: 30px;
+            transform: rotate(-5deg);
+            transition: var(--transition);
+        }
+
+        .problem-card:hover .problem-icon {
+            transform: rotate(0deg) scale(1.1);
+        }
+
+        .problem-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--starlight);
+        }
+
+        .problem-card p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .problem-tag {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--sun-gold);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        /* Program Section - Flip Cards */
+        .program-section {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .program-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .flip-card {
+            height: 500px;
+            perspective: 1500px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: var(--radius-3d);
+            padding: 60px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .flip-card-front {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .flip-card-front h3 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .flip-card-front h3 i {
+            color: #ef4444;
+        }
+
+        .not-list {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .not-list li {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+            font-size: 1.2rem;
+        }
+
+        .not-list li i {
+            color: #ef4444;
+            font-size: 1.5rem;
+        }
+
+        .flip-card-back {
+            background: linear-gradient(145deg, var(--sun-gold), var(--supernova));
+            color: var(--deep-space);
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-back h3 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .spots-info {
+            background: rgba(10, 14, 23, 0.3);
+            padding: 30px;
+            border-radius: var(--radius-3d);
+            margin: 40px 0;
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .spots-count {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--deep-space);
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .spots-label {
+            font-weight: 700;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: rgba(10, 14, 23, 0.3);
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 70%;
+            background: var(--deep-space);
+            border-radius: 5px;
+            animation: progressAnimation 2s ease-out;
+        }
+
+        /* Benefits Section - Parallax Cards */
+        .benefits-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefits-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius-3d);
+            padding: 50px 40px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+
+        .benefit-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(245, 158, 11, 0.1), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .benefit-card:hover:before {
+            transform: translateX(100%);
+        }
+
+        .benefit-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 5rem;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.05);
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            line-height: 1;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--starlight);
+            position: relative;
+            z-index: 2;
+        }
+
+        .benefit-card p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+            font-size: 1.1rem;
+        }
+
+        .benefit-tags {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        .benefit-tag {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--sun-gold);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            transition: var(--transition);
+        }
+
+        .benefit-tag:hover {
+            background: rgba(245, 158, 11, 0.3);
+            transform: scale(1.1);
+        }
+
+        /* Journey Timeline - 3D Timeline */
+        .journey-timeline {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .journey-timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--sun-gold), transparent);
+            opacity: 0.3;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 80px;
+            position: relative;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .timeline-item:nth-child(odd) {
+            justify-content: flex-start;
+            padding-right: 50%;
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-end;
+            padding-left: 50%;
+        }
+
+        .time-marker {
+            position: absolute;
+            top: 0;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(145deg, var(--sun-gold), var(--supernova));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--deep-space);
+            font-weight: 900;
+            font-size: 1.5rem;
+            z-index: 2;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: var(--glow);
+            animation: markerPulse 3s infinite;
+        }
+
+        @keyframes markerPulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(245, 158, 11, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(245, 158, 11, 0.8); }
+        }
+
+        .time-label {
+            position: absolute;
+            top: 90px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: 700;
+            color: var(--sun-gold);
+            background: rgba(10, 14, 23, 0.8);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+        }
+
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius-3d);
+            padding: 40px;
+            width: 100%;
+            max-width: 450px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+            transform-style: preserve-3d;
+            transform: rotateY(20deg);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            transform: rotateY(-20deg);
+        }
+
+        .timeline-content:hover {
+            transform: rotateY(0deg) translateY(-10px);
+            border-color: rgba(245, 158, 11, 0.3);
+            box-shadow: var(--float), var(--glow);
+        }
+
+        .timeline-content h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: var(--starlight);
+        }
+
+        .timeline-content p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Pricing Section - 3D Cards */
+        .pricing-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            perspective: 1500px;
+        }
+
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius-3d);
+            padding: 60px 50px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transform-style: preserve-3d;
+            transform: translateZ(0);
+        }
+
+        .pricing-card.recommended {
+            background: linear-gradient(145deg, rgba(245, 158, 11, 0.1), rgba(139, 92, 246, 0.1));
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            transform: translateZ(20px);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-20px) translateZ(20px);
+            border-color: rgba(245, 158, 11, 0.5);
+            box-shadow: var(--float), var(--glow);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: 30px;
+            right: -30px;
+            background: linear-gradient(145deg, var(--sun-gold), var(--supernova));
+            color: var(--deep-space);
+            padding: 12px 50px;
+            font-weight: 900;
+            font-size: 1rem;
+            transform: rotate(45deg);
+            box-shadow: var(--glow);
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .pricing-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--starlight);
+        }
+
+        .pricing-price {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 900;
+            color: var(--sun-gold);
+            margin-bottom: 10px;
+            line-height: 1;
+            text-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .pricing-savings {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--sun-gold);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 900;
+            display: inline-block;
+            margin-bottom: 20px;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 50px;
+        }
+
+        .pricing-features li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+        }
+
+        .pricing-features li i {
+            color: var(--sun-gold);
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 100px 0 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 60px;
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo-3d {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(145deg, var(--sun-gold), var(--supernova));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--deep-space);
+            font-size: 1.8rem;
+            font-weight: 900;
+            box-shadow: var(--glow);
+        }
+
+        .footer-logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.8rem;
+            color: var(--starlight);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-logo-text span {
+            background: linear-gradient(to right, var(--sun-gold), var(--supernova));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-about p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 30px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--starlight);
+            text-decoration: none;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .social-link:hover {
+            background: linear-gradient(145deg, var(--sun-gold), var(--supernova));
+            color: var(--deep-space);
+            transform: translateY(-5px) rotate(5deg);
+            box-shadow: var(--glow);
+        }
+
+        .footer-heading {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: var(--starlight);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: var(--sun-gold);
+            transform: translateX(10px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .program-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .flip-card {
+                height: 400px;
+            }
+
+            .journey-timeline:before {
+                left: 40px;
+            }
+
+            .timeline-item {
+                padding-left: 80px !important;
+                padding-right: 0 !important;
+                justify-content: flex-start !important;
+            }
+
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                padding-left: 80px;
+                padding-right: 0;
+            }
+
+            .time-marker {
+                left: 40px;
+            }
+
+            .time-label {
+                left: 40px;
+                transform: translateX(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .problems-grid,
+            .benefits-container,
+            .pricing-container {
+                grid-template-columns: 1fr;
+            }
+
+            .flip-card {
+                height: 350px;
+            }
+
+            .flip-card-front,
+            .flip-card-back {
+                padding: 40px 30px;
+            }
+        }
+
+        /* Animation Classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px) rotateX(10deg);
+            transition: opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                        transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0) rotateX(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Cosmic Background -->
+    <div class="cosmic-bg" id="cosmic-bg"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-3d">
+                    <i class="fas fa-eye-slash"></i>
+                </div>
+                <div class="logo-text">Blindfold<span>Rebirth</span></div>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#problems">The Weight</a></li>
+                <li><a href="#program">The Program</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#journey">Journey</a></li>
+                <li><a href="#pricing">Investment</a></li>
+            </ul>
+            
+            <a href="#pricing" class="cta-button">
+                <span>Book Your Spot</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-orb"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="badge-container">
+                    <div class="badge">
+                        <i class="fas fa-award"></i>
+                        India's First • Since 2023
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-user-friends"></i>
+                        Limited Seats
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-users"></i>
+                        Only 25 Participants
+                    </div>
+                </div>
+                
+                <h1 class="hero-title">Create Your Own Light</h1>
+                
+                <h2 class="hero-subtitle">India's First One-Day Blindfold Rebirth Program</h2>
+                
+                <p class="hero-text">
+                    A transformative residential immersion hosted by Motivational Chanakya (M. Mahendraa), philosopher, motivational speaker, and author of The 3C Effect. Join us in Pune for a profound journey inward with pure vegetarian nourishment throughout.
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="#pricing" class="cta-button">
+                        Start Your Inner Unlock Now
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section id="problems" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Release Your Burden</div>
+                <h2 class="section-title">The Weight You've Been Carrying</h2>
+                <p class="section-subtitle">Break free from what's been holding you back from living your fullest life</p>
+            </div>
+            
+            <div class="problems-grid">
+                <div class="problem-card animate-on-scroll">
+                    <div class="problem-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Fear That Paralyzes</h3>
+                    <p>You know what you want but can't move forward. The fear whispers "not yet" every single time.</p>
+                    <div class="problem-tag">Keeps you stuck in hesitation</div>
+                </div>
+                
+                <div class="problem-card animate-on-scroll">
+                    <div class="problem-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Money Blocks</h3>
+                    <p>No matter how hard you work, abundance feels out of reach. Old stories keep replaying.</p>
+                    <div class="problem-tag">Generational patterns at play</div>
+                </div>
+                
+                <div class="problem-card animate-on-scroll">
+                    <div class="problem-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Overthinking Loops</h3>
+                    <p>Your mind won't quiet. Analysis becomes paralysis. You're exhausted from your own thoughts.</p>
+                    <div class="problem-tag">Mental exhaustion cycle</div>
+                </div>
+                
+                <div class="problem-card animate-on-scroll">
+                    <div class="problem-icon">
+                        <i class="fas fa-heart-broken"></i>
+                    </div>
+                    <h3>Emotional Pain</h3>
+                    <p>Past hurts live in your body. You've tried to move on, but the ache remains beneath the surface.</p>
+                    <div class="problem-tag">Stored in cellular memory</div>
+                </div>
+                
+                <div class="problem-card animate-on-scroll">
+                    <div class="problem-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>Deep Loneliness</h3>
+                    <p>Even in rooms full of people, you feel disconnected. The isolation is becoming unbearable.</p>
+                    <div class="problem-tag">Existential disconnection</div>
+                </div>
+                
+                <div class="problem-card animate-on-scroll">
+                    <div class="problem-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Relationship Wounds</h3>
+                    <p>Trust feels impossible. You keep attracting the same patterns, the same heartbreak, again and again.</p>
+                    <div class="problem-tag">Pattern repetition cycle</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Section -->
+    <section id="program" class="section program-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Understanding The Journey</div>
+                <h2 class="section-title">What This Program Is</h2>
+                <p class="section-subtitle">This is not another workshop. This is a complete inner transformation.</p>
+            </div>
+            
+            <div class="program-container">
+                <div class="flip-card animate-on-scroll">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3><i class="fas fa-times-circle"></i> What It's NOT</h3>
+                            <ul class="not-list">
+                                <li><i class="fas fa-times"></i> Not a workshop - No superficial activities</li>
+                                <li><i class="fas fa-times"></i> Not a seminar - No passive listening</li>
+                                <li><i class="fas fa-times"></i> Not motivation - No temporary inspiration</li>
+                            </ul>
+                            <p>This program rejects surface-level solutions and quick fixes that don't create lasting change.</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3><i class="fas fa-info-circle"></i> The Truth</h3>
+                            <p>This is about real transformation, not temporary fixes. We go deep to create lasting change from within.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card animate-on-scroll">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3><i class="fas fa-check-circle"></i> What It IS</h3>
+                            <p><strong>Something that changes you from within.</strong></p>
+                            <p>This is a guided inner journey. Disconnect from the outer world to reconnect with your inner truth.</p>
+                            <p>Experience a once-in-a-lifetime rebirth that awakens the light you've carried all along.</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="spots-info">
+                                <div class="spots-count">9/30</div>
+                                <div class="spots-label">spots remaining</div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <div class="spots-label">70% filled</div>
+                            </div>
+                            <a href="#pricing" class="cta-button" style="background: var(--deep-space); color: var(--sun-gold);">
+                                <span>Secure Your Spot</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="section benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Transformational Outcomes</div>
+                <h2 class="section-title">Key Benefits</h2>
+                <p class="section-subtitle">Transformational outcomes you'll experience after your 25-hour rebirth journey</p>
+            </div>
+            
+            <div class="benefits-container">
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-number">01</div>
+                    <h3>Deep Life Clarity</h3>
+                    <p>See through confusion and uncertainty. Gain crystal-clear understanding of your life's purpose, values, and direction.</p>
+                    <div class="benefit-tags">
+                        <div class="benefit-tag">Purpose alignment</div>
+                        <div class="benefit-tag">Future vision clarity</div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-number">02</div>
+                    <h3>Stronger Inner Stability</h3>
+                    <p>Develop an unshakeable foundation within. Remain centered and grounded even amidst life's storms and challenges.</p>
+                    <div class="benefit-tags">
+                        <div class="benefit-tag">Emotional grounding</div>
+                        <div class="benefit-tag">Resilience building</div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-number">03</div>
+                    <h3>Emotional Lightness</h3>
+                    <p>Release heavy emotional baggage. Experience freedom from past burdens and move through life with renewed lightness.</p>
+                    <div class="benefit-tags">
+                        <div class="benefit-tag">Burden release</div>
+                        <div class="benefit-tag">Freedom feeling</div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-number">04</div>
+                    <h3>Clear Personal Direction</h3>
+                    <p>Find your true north. Move forward with conviction knowing exactly what steps to take toward your authentic life.</p>
+                    <div class="benefit-tags">
+                        <div class="benefit-tag">Path clarity</div>
+                        <div class="benefit-tag">Next step certainty</div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-number">05</div>
+                    <h3>Renewed Sense of Purpose</h3>
+                    <p>Rediscover your 'why'. Connect with a deep, meaningful purpose that fuels your daily actions with passion and intention.</p>
+                    <div class="benefit-tags">
+                        <div class="benefit-tag">Passion reignition</div>
+                        <div class="benefit-tag">Meaningful goals</div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-number">06</div>
+                    <h3>Inner Discipline & Focus</h3>
+                    <p>Cultivate mental mastery. Develop the ability to concentrate deeply and maintain consistent progress toward your goals.</p>
+                    <div class="benefit-tags">
+                        <div class="benefit-tag">Laser focus</div>
+                        <div class="benefit-tag">Mental strength</div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-number">07</div>
+                    <h3>Confidence in Personal Decisions</h3>
+                    <p>Trust your inner wisdom. Make choices aligned with your truth, free from doubt and second-guessing.</p>
+                    <div class="benefit-tags">
+                        <div class="benefit-tag">Decision certainty</div>
+                        <div class="benefit-tag">Inner authority</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Timeline -->
+    <section id="journey" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Your Transformation Process</div>
+                <h2 class="section-title">Your 25-Hour Transformation Journey</h2>
+                <p class="section-subtitle">Experience India's first blindfold rebirth program through this carefully crafted journey</p>
+            </div>
+            
+            <div class="journey-timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="time-marker">1</div>
+                    <div class="time-label">8:00 AM</div>
+                    <div class="timeline-content">
+                        <h3>Safe Entry</h3>
+                        <p>Medical clearance ensures your safety. You're paired with a buddy who stays with you throughout. This is your foundation of trust. A safe container for your transformation journey begins here.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate-on-scroll">
+                    <div class="time-marker">2</div>
+                    <div class="time-label">9:00 AM</div>
+                    <div class="timeline-content">
+                        <h3>Blindfold Begins</h3>
+                        <p>The blindfold goes on. The journey inward truly begins as external distractions fade away.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate-on-scroll">
+                    <div class="time-marker">3</div>
+                    <div class="time-label">2:00 PM</div>
+                    <div class="timeline-content">
+                        <h3>Forgiveness Ritual</h3>
+                        <p>Ho'oponopono ceremony guides you through releasing resentment toward others and toward yourself. The weight starts lifting as forgiveness flows through you.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate-on-scroll">
+                    <div class="time-marker">4</div>
+                    <div class="time-label">6:00 PM</div>
+                    <div class="timeline-content">
+                        <h3>Letter Burn</h3>
+                        <p>You write what you're leaving behind. Then you burn it. Watch your old story turn to ash. This moment changes everything.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate-on-scroll">
+                    <div class="time-marker">5</div>
+                    <div class="time-label">10:00 PM</div>
+                    <div class="timeline-content">
+                        <h3>Blindfold Sleep</h3>
+                        <p>You rest in darkness with support nearby. Your subconscious processes and rewires while you sleep. Deep healing happens here in the silence of night.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate-on-scroll">
+                    <div class="time-marker">6</div>
+                    <div class="time-label">9:00 AM</div>
+                    <div class="timeline-content">
+                        <h3>Rebirth Morning</h3>
+                        <p>The blindfold comes off. You're not the same person who walked in 25 hours ago. You see yourself—and the world—completely differently. A new perspective dawns.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Your Investment</div>
+                <h2 class="section-title">Your Rebirth Begins January 2-3, 2026</h2>
+                <p class="section-subtitle">The final step toward your complete transformation. 2026 awaits your rebirth.</p>
+            </div>
+            
+            <div class="pricing-container">
+                <div class="pricing-card animate-on-scroll">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Regular Investment</h3>
+                        <div class="pricing-price">₹12,999</div>
+                        <p>Standard Pricing</p>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Full access to the complete 25-hour rebirth experience</li>
+                        <li><i class="fas fa-check"></i> All transformation materials included</li>
+                        <li><i class="fas fa-check"></i> Same deep transformation results</li>
+                        <li><i class="fas fa-check"></i> Personal buddy system support</li>
+                        <li><i class="fas fa-check"></i> Three sattvik vegetarian meals</li>
+                    </ul>
+                    
+                    <a href="#" class="cta-button" style="width: 100%; text-align: center; justify-content: center;">
+                        <span>Book Regular Spot</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="pricing-card recommended animate-on-scroll">
+                    <div class="pricing-badge">RECOMMENDED</div>
+                    
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Early Bird Investment</h3>
+                        <div class="pricing-price">₹9,999</div>
+                        <div class="pricing-savings">Save ₹3,000</div>
+                        <p>Limited Time Pricing</p>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Everything in Regular Investment</li>
+                        <li><i class="fas fa-check"></i> Early commitment = deeper transformation preparation</li>
+                        <li><i class="fas fa-check"></i> Priority access to preparation materials</li>
+                        <li><i class="fas fa-check"></i> Special early bird bonus materials</li>
+                        <li><i class="fas fa-check"></i> Exclusive pre-program meditation series</li>
+                    </ul>
+                    
+                    <a href="#" class="cta-button" style="width: 100%; text-align: center; justify-content: center;">
+                        <span>Book Early Bird Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    
+                    <p style="text-align: center; margin-top: 20px; font-size: 0.9rem; color: rgba(255, 255, 255, 0.7);">
+                        <i class="fas fa-exclamation-circle" style="color: var(--sun-gold);"></i> Only 10 early bird spots remaining
+                    </p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 80px;">
+                <div class="badge" style="background: rgba(245, 158, 11, 0.2); color: var(--sun-gold); font-size: 1.1rem; padding: 15px 40px; border-color: rgba(245, 158, 11, 0.3);">
+                    <i class="fas fa-shield-alt"></i>
+                    100% money-back guarantee if you complete medical clearance but are not approved
+                </div>
+                
+                <div style="margin-top: 50px;">
+                    <div style="display: inline-block; margin-right: 30px;">
+                        <div style="font-family: 'Montserrat', sans-serif; font-size: 3rem; font-weight: 900; color: var(--sun-gold);">10/30</div>
+                        <div style="font-weight: 700; color: rgba(255, 255, 255, 0.7);">spots remaining</div>
+                    </div>
+                    <div style="display: inline-block;">
+                        <div style="font-family: 'Montserrat', sans-serif; font-size: 3rem; font-weight: 900; color: var(--sun-gold);">33%</div>
+                        <div style="font-weight: 700; color: rgba(255, 255, 255, 0.7);">filled</div>
+                    </div>
+                </div>
+                
+                <p style="margin-top: 30px; font-size: 1.5rem; color: var(--starlight); font-weight: 700;">
+                    Ready to Rebuild Yourself from Inside?
+                </p>
+                
+                <a href="#" class="cta-button" style="margin-top: 30px; padding: 20px 50px; font-size: 1.2rem;">
+                    <span>Book Your Rebirth Now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="footer-logo-3d">
+                            <i class="fas fa-eye-slash"></i>
+                        </div>
+                        <div class="footer-logo-text">Blindfold<span>Rebirth</span></div>
+                    </div>
+                    <p>India's First One-Day Blindfold Rebirth Program. A transformative residential immersion hosted by Motivational Chanakya (M. Mahendraa).</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#problems">The Weight You Carry</a></li>
+                        <li><a href="#program">The Program</a></li>
+                        <li><a href="#benefits">Key Benefits</a></li>
+                        <li><a href="#journey">Transformation Journey</a></li>
+                        <li><a href="#pricing">Investment</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Program Details</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Safety & Protocols</a></li>
+                        <li><a href="#">What to Bring</a></li>
+                        <li><a href="#">Venue Information</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@blindfoldrebirth.com"><i class="fas fa-envelope"></i> info@blindfoldrebirth.com</a></li>
+                        <li><a href="tel:+911234567890"><i class="fas fa-phone"></i> +91 12345 67890</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Pune, Maharashtra, India</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Blindfold Rebirth Program. All rights reserved.</p>
+                <p style="margin-top: 10px;">Create Your Own Light | India's First Blindfold Rebirth Program</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Create dynamic starfield
+        function createStars() {
+            const cosmicBg = document.getElementById('cosmic-bg');
+            const starCount = 150;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                // Random position
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                
+                // Random size
+                const size = Math.random() * 3 + 1;
+                
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.left = `${x}%`;
+                star.style.top = `${y}%`;
+                
+                // Random animation delay
+                star.style.animationDelay = `${Math.random() * 5}s`;
+                
+                cosmicBg.appendChild(star);
+            }
+        }
+        
+        createStars();
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animate-on-scroll elements
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // 3D parallax effect on cards
+        document.querySelectorAll('.benefit-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateY = ((x - centerX) / centerX) * 5;
+                const rotateX = ((centerY - y) / centerY) * 5;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(20px)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+                card.style.transition = 'transform 0.5s ease';
+            });
+        });
+
+        // Animated counter for stats
+        function animateCounter(element, target, duration) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start);
+                }
+            }, 16);
+        }
+
+        // Trigger counter animation when in view
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.pricing-price');
+                    counters.forEach(counter => {
+                        const target = parseInt(counter.textContent.replace('₹', '').replace(',', ''));
+                        counter.textContent = '₹0';
+                        animateCounter(counter, target, 2000);
+                    });
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // Observe pricing section for counter animation
+        const pricingSection = document.querySelector('#pricing');
+        if (pricingSection) {
+            counterObserver.observe(pricingSection);
+        }
+
+        // Create floating nebula effect on scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const nebula1 = document.querySelector('.nebula-1');
+            const nebula2 = document.querySelector('.nebula-2');
+            
+            if (nebula1) {
+                nebula1.style.transform = `translate(${scrolled * 0.02}px, ${scrolled * 0.03}px)`;
+            }
+            
+            if (nebula2) {
+                nebula2.style.transform = `translate(${scrolled * -0.03}px, ${scrolled * 0.02}px)`;
+            }
+        });
+
+        // Add hover sound effect simulation (visual only)
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                button.style.transform = 'translateY(-5px) scale(1.05)';
+            });
+            
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Progress bar animation
+        const progressBar = document.querySelector('.progress-fill');
+        if (progressBar) {
+            let width = 0;
+            const targetWidth = 70;
+            const interval = setInterval(() => {
+                if (width >= targetWidth) {
+                    clearInterval(interval);
+                } else {
+                    width++;
+                    progressBar.style.width = `${width}%`;
+                }
+            }, 20);
+        }
+    </script>
+</body>
+</html>
